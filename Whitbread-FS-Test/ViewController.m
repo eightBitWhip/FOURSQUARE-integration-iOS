@@ -15,6 +15,8 @@
 
 #import "FSRequests.h"
 
+#import "FSLocationManager.h"
+
 #define BG_IMAGE (@"beaut")
 
 @interface ViewController () <SearchRequestProtocol, ResponseProtocol, SearchContainerProtocol, SearchResultsTableProtocol>
@@ -56,6 +58,8 @@
         [self.view insertSubview:animatedBg atIndex:0];
         self.bgInitComplete = YES;
     }
+    
+    [FSLocationManager sharedManager];
     
 }
 

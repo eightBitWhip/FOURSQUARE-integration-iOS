@@ -13,6 +13,8 @@
 #import "FSVenueCell.h"
 #import "FSPullToRefresh.h"
 
+#import "FSLocationManager.h"
+
 #define CELL_REUSE_ID (@"venueCell")
 
 @interface FSSearchResultsTable () <UITableViewDelegate, UITableViewDataSource, PullToRefreshDelegate, UIScrollViewDelegate>
@@ -102,6 +104,13 @@
     
     FSVenue *venue = self.venues[indexPath.row];
     cell.locationName.text = venue.name;
+    
+    if ( [venue.location objectForKey:LOCATION_LAT_KEY] && [venue.location objectForKey:LOCATION_LONG_KEY] ) {
+        float distance = [[FSLocationManager sharedManager] distanceFromCurrentLocationForLat:[[venue.location objectForKey:LOCATION_LAT_KEY] floatValue] andLng:[[venue.location objectForKey:LOCATION_LONG_KEY] floatValue]];
+        if ( distance > 0.0 ) {
+            cell.distanceFromMe.text = [NSString stringWithFormat:@"%.1f km", distance/1000];
+        }
+    }
     
     [cell styleCell];
     [cell presentCell];

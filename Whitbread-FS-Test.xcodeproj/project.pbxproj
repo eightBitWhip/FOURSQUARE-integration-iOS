@@ -30,6 +30,7 @@
 		9719402C1CAF086100630ABD /* beaut.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9719402B1CAF086100630ABD /* beaut.gif */; };
 		9719402F1CAF0C5000630ABD /* FSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719402E1CAF0C5000630ABD /* FSButton.m */; };
 		971940321CAF115A00630ABD /* AnimatedBusyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940311CAF115A00630ABD /* AnimatedBusyView.m */; };
+		971940351CAF154500630ABD /* FSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940341CAF154500630ABD /* FSLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		9719402E1CAF0C5000630ABD /* FSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSButton.m; sourceTree = "<group>"; };
 		971940301CAF115A00630ABD /* AnimatedBusyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedBusyView.h; sourceTree = "<group>"; };
 		971940311CAF115A00630ABD /* AnimatedBusyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedBusyView.m; sourceTree = "<group>"; };
+		971940331CAF154500630ABD /* FSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocationManager.h; sourceTree = "<group>"; };
+		971940341CAF154500630ABD /* FSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,8 @@
 				9719400D1CAEF09900630ABD /* InputValidator.m */,
 				9719400F1CAEF0A300630ABD /* DataFormatter.h */,
 				971940101CAEF0A300630ABD /* DataFormatter.m */,
+				971940331CAF154500630ABD /* FSLocationManager.h */,
+				971940341CAF154500630ABD /* FSLocationManager.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 				97193FCD1CAEEE1E00630ABD /* AppDelegate.m in Sources */,
 				9719401D1CAEF97B00630ABD /* FSVenueCell.m in Sources */,
 				971940321CAF115A00630ABD /* AnimatedBusyView.m in Sources */,
+				971940351CAF154500630ABD /* FSLocationManager.m in Sources */,
 				97193FCA1CAEEE1E00630ABD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
