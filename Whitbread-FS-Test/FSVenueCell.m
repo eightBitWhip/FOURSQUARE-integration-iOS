@@ -14,8 +14,8 @@
 
 - (void)styleCell {
     
-    self.contentView.backgroundColor = [STYLE_COLOUR colorWithAlphaComponent:0.6];
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [STYLE_COLOUR colorWithAlphaComponent:0.6];
+    self.contentView.backgroundColor = [UIColor clearColor];
     
 }
 

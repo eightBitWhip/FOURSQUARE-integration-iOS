@@ -29,6 +29,7 @@
 		9719402A1CAF078C00630ABD /* kitty.gif in Resources */ = {isa = PBXBuildFile; fileRef = 971940291CAF078C00630ABD /* kitty.gif */; };
 		9719402C1CAF086100630ABD /* beaut.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9719402B1CAF086100630ABD /* beaut.gif */; };
 		9719402F1CAF0C5000630ABD /* FSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719402E1CAF0C5000630ABD /* FSButton.m */; };
+		971940321CAF115A00630ABD /* AnimatedBusyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940311CAF115A00630ABD /* AnimatedBusyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		9719402B1CAF086100630ABD /* beaut.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = beaut.gif; sourceTree = "<group>"; };
 		9719402D1CAF0C5000630ABD /* FSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSButton.h; sourceTree = "<group>"; };
 		9719402E1CAF0C5000630ABD /* FSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSButton.m; sourceTree = "<group>"; };
+		971940301CAF115A00630ABD /* AnimatedBusyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedBusyView.h; sourceTree = "<group>"; };
+		971940311CAF115A00630ABD /* AnimatedBusyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedBusyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,8 @@
 				971940261CAF06C100630ABD /* AnimatedBGView.m */,
 				9719402D1CAF0C5000630ABD /* FSButton.h */,
 				9719402E1CAF0C5000630ABD /* FSButton.m */,
+				971940301CAF115A00630ABD /* AnimatedBusyView.h */,
+				971940311CAF115A00630ABD /* AnimatedBusyView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				971940141CAEF0DB00630ABD /* FSVenueMapViewController.m in Sources */,
 				97193FCD1CAEEE1E00630ABD /* AppDelegate.m in Sources */,
 				9719401D1CAEF97B00630ABD /* FSVenueCell.m in Sources */,
+				971940321CAF115A00630ABD /* AnimatedBusyView.m in Sources */,
 				97193FCA1CAEEE1E00630ABD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

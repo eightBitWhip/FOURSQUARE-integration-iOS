@@ -11,6 +11,7 @@
 #import "FSSearchResultsTable.h"
 #import "FSSearchInputView.h"
 #import "AnimatedBGView.h"
+#import "AnimatedBusyView.h"
 
 #import "FSRequests.h"
 
@@ -27,6 +28,8 @@
 @property (nonatomic) FSRequests *requests;
 
 @property (nonatomic) BOOL bgInitComplete;
+
+@property (nonatomic) AnimatedBusyView *busyView;
 
 @end
 
@@ -69,7 +72,29 @@
         self.requests.responseDelegate = self;
     }
     
+    [self showBusyView];
+    
     [self.requests searchNearWithTerm:searchTerm];
+    
+}
+
+- (void)showBusyView {
+    
+    self.busyView = [[AnimatedBusyView alloc] initWithFadingSquaresAndMsg:@"Fetching Venues"];
+    UIWindow *window = [[UIApplication sharedApplication] windows].firstObject;
+    [window addSubview:self.busyView];
+    
+}
+
+- (void)hideBusyView {
+    
+    [UIView animateWithDuration:0.2 delay:1.5 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.busyView.alpha = 0.0;
+    } completion:^(BOOL finished){
+        
+        [self.busyView removeFromSuperview];
+        
+    }];
     
 }
 
@@ -79,6 +104,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         self.mapButtonWidthConstraint.constant = 100.0;
+        [self hideBusyView];
         [self.resultsTable updateWithResults:results];
     });
     
@@ -86,7 +112,7 @@
 
 - (void)requestFailedWithResponse:(NSDictionary *)response {
     
-    
+    [self hideBusyView];
     
 }
 
@@ -94,7 +120,7 @@
 
 - (void)requestFailedWithErrorMessage:(NSString *)msg {
     
-    
+    [self hideBusyView];
     
 }
 
