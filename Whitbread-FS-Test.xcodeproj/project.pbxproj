@@ -23,6 +23,8 @@
 		971940141CAEF0DB00630ABD /* FSVenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940131CAEF0DB00630ABD /* FSVenueMapViewController.m */; };
 		9719401A1CAEF78500630ABD /* FSSearchResultsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940191CAEF78500630ABD /* FSSearchResultsTable.m */; };
 		9719401D1CAEF97B00630ABD /* FSVenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719401C1CAEF97B00630ABD /* FSVenueCell.m */; };
+		971940201CAEFE5A00630ABD /* FSSearchInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719401F1CAEFE5A00630ABD /* FSSearchInputView.m */; };
+		971940231CAF018D00630ABD /* FSPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940221CAF018D00630ABD /* FSPullToRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,11 @@
 		971940191CAEF78500630ABD /* FSSearchResultsTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchResultsTable.m; sourceTree = "<group>"; };
 		9719401B1CAEF97B00630ABD /* FSVenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVenueCell.h; sourceTree = "<group>"; };
 		9719401C1CAEF97B00630ABD /* FSVenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVenueCell.m; sourceTree = "<group>"; };
+		9719401E1CAEFE5A00630ABD /* FSSearchInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearchInputView.h; sourceTree = "<group>"; };
+		9719401F1CAEFE5A00630ABD /* FSSearchInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchInputView.m; sourceTree = "<group>"; };
+		971940211CAF018D00630ABD /* FSPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPullToRefresh.h; sourceTree = "<group>"; };
+		971940221CAF018D00630ABD /* FSPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPullToRefresh.m; sourceTree = "<group>"; };
+		971940241CAF01D200630ABD /* Styles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Styles.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +191,10 @@
 				971940191CAEF78500630ABD /* FSSearchResultsTable.m */,
 				9719401B1CAEF97B00630ABD /* FSVenueCell.h */,
 				9719401C1CAEF97B00630ABD /* FSVenueCell.m */,
+				9719401E1CAEFE5A00630ABD /* FSSearchInputView.h */,
+				9719401F1CAEFE5A00630ABD /* FSSearchInputView.m */,
+				971940211CAF018D00630ABD /* FSPullToRefresh.h */,
+				971940221CAF018D00630ABD /* FSPullToRefresh.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -221,6 +232,7 @@
 				971940001CAEEE9400630ABD /* Fonts */,
 				971940041CAEEEF800630ABD /* WFST.pch */,
 				971940051CAEEF0C00630ABD /* NetworkConfig.h */,
+				971940241CAF01D200630ABD /* Styles.h */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -362,10 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971940201CAEFE5A00630ABD /* FSSearchInputView.m in Sources */,
 				9719401A1CAEF78500630ABD /* FSSearchResultsTable.m in Sources */,
 				971940111CAEF0A300630ABD /* DataFormatter.m in Sources */,
 				971940081CAEF05F00630ABD /* AbstractNetworking.m in Sources */,
 				9719400E1CAEF09900630ABD /* InputValidator.m in Sources */,
+				971940231CAF018D00630ABD /* FSPullToRefresh.m in Sources */,
 				971940031CAEEEC900630ABD /* FSVenue.m in Sources */,
 				9719400B1CAEF07B00630ABD /* FSRequests.m in Sources */,
 				97193FD01CAEEE1E00630ABD /* ViewController.m in Sources */,

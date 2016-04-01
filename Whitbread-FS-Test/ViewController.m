@@ -9,12 +9,15 @@
 #import "ViewController.h"
 
 #import "FSSearchResultsTable.h"
+#import "FSSearchInputView.h"
 
 #import "FSRequests.h"
 
-@interface ViewController () <SearchRequestProtocol, ResponseProtocol>
+@interface ViewController () <SearchRequestProtocol, ResponseProtocol, SearchContainerProtocol, SearchResultsTableProtocol>
 
 @property (nonatomic) IBOutlet FSSearchResultsTable *resultsTable;
+
+@property (weak, nonatomic) IBOutlet FSSearchInputView *searchInputContainer;
 
 @property (nonatomic) FSRequests *requests;
 
@@ -25,11 +28,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.searchInputContainer.searchDelegate = self;
+    self.resultsTable.tableDelegate = self;
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     
-    [self attemptSearchWithValue:@"London"];
+    [self.resultsTable addPTR];
+    [self.resultsTable setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     
 }
 
@@ -71,6 +79,32 @@
 - (void)requestFailedWithErrorMessage:(NSString *)msg {
     
     
+    
+}
+
+#pragma mark - SearchBar DMs-
+
+- (void)performSearchWithTerm:(NSString *)searchTerm {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self attemptSearchWithValue:searchTerm];
+    });
+    
+}
+
+- (void)invalidSearchInput {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.resultsTable finishedUpdating];
+    });
+}
+
+#pragma mark - ResultsTable DMs-
+
+- (void)tableRequestedUpdate {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.searchInputContainer nudge]; //!!
+    });
     
 }
 

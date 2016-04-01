@@ -13,12 +13,15 @@
 #import "FSVenue.h"
 
 #import "FSVenueCell.h"
+#import "FSPullToRefresh.h"
 
 #define CELL_REUSE_ID (@"venueCell")
 
-@interface FSSearchResultsTable () <UITableViewDelegate, UITableViewDataSource>
+@interface FSSearchResultsTable () <UITableViewDelegate, UITableViewDataSource, PullToRefreshDelegate, UIScrollViewDelegate>
 
 @property (nonatomic) NSArray *venues;
+
+@property (nonatomic) FSPullToRefresh *ptr;
 
 @end
 
@@ -33,6 +36,14 @@
     
 }
 
+-(void)addPTR{
+    
+    self.ptr = [[FSPullToRefresh alloc] initWithTableView:self];
+    [self.ptr setDelegate:self];
+    [self addSubview:self.ptr];
+    
+}
+
 - (void)updateWithResults:(NSDictionary *)results {
     
     if ( [DataFormatter dictionary:results containsAndIsNotNullKey:RESPONSE_VENUES_KEY] ) {
@@ -41,6 +52,14 @@
         [self reloadData];
         
     }
+    
+    [self finishedUpdating];
+    
+}
+
+-(void)finishedUpdating{
+    
+    [self.ptr finishedUpdating];
     
 }
 
@@ -84,6 +103,32 @@
     [cell presentCell];
     
     return cell;
+    
+}
+
+#pragma mark - PTRDMs-
+
+-(void)readyForARefreshDontForgetToLetMeKnowWhenYouveFinished{
+    
+    if ( self.tableDelegate ) {
+        [self.tableDelegate tableRequestedUpdate];
+    }
+        
+}
+
+#pragma mark - ScrollView DMs-
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    if ( self.contentOffset.y < 0 ) {
+        [self.ptr updateViewWithOffset:(scrollView.contentOffset.y*-1)];
+    }
+    
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+    [self.ptr releasedScrollView];
     
 }
 

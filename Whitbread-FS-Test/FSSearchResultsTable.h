@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SearchResultsTableProtocol <NSObject>
+
+- (void)tableRequestedUpdate;
+
+@end
+
 @interface FSSearchResultsTable : UITableView
 
+@property (nonatomic) id<SearchResultsTableProtocol>tableDelegate;
+
 - (void)updateWithResults:(NSDictionary*)results;
+- (void)addPTR;
+- (void)finishedUpdating;
 
 @end
