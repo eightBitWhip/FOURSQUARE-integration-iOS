@@ -12,11 +12,13 @@
 
 static FSLocationManager *sharedInstance = nil;
 
-@interface FSLocationManager () <CLLocationManagerDelegate>
+@interface FSLocationManager () <CLLocationManagerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic) CLLocationManager *locationManager;
 
 @property (nonatomic) CLLocation *myLocation;
+
+@property (nonatomic) float desiredLat, desiredLng;
 
 @end
 
@@ -90,6 +92,15 @@ static FSLocationManager *sharedInstance = nil;
     
 }
 
+- (void)selectedLocationWithLat:(float)lat andLng:(float)lng {
+    
+    self.desiredLat = lat, self.desiredLng = lng;
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Venue Selected" message:@"How about some directions?" delegate:self cancelButtonTitle:@"No thanks" otherButtonTitles:@"Start route", nil];
+    [alert show];
+    
+}
+
 #pragma mark - Location DMs-
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
@@ -104,6 +115,20 @@ static FSLocationManager *sharedInstance = nil;
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     
     [self checkAuthStatus];
+    
+}
+
+#pragma mark - UIAlertView DMs-
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    NSString *buttonTitle = [alertView buttonTitleAtIndex:buttonIndex];
+    if ( [buttonTitle isEqualToString:@"Start route"] ) {
+        
+        NSString* url = [NSString stringWithFormat: @"http://maps.google.com/maps?saddr=Current+Location&daddr=%f,%f", self.desiredLat, self.desiredLng];
+        [[UIApplication sharedApplication] openURL: [NSURL URLWithString: url]];
+        
+    }
     
 }
 

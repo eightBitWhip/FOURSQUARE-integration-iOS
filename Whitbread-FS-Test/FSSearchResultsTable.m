@@ -69,6 +69,12 @@
     
 }
 
+- (NSArray *)currentVenues {
+    
+    return self.venues;
+    
+}
+
 #pragma mark - TableView DMs-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -91,7 +97,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
+    FSVenue *venue = self.venues[indexPath.row];
+    [self.tableDelegate selectedVenue:venue];
     
 }
 

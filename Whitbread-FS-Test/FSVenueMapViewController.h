@@ -10,4 +10,6 @@
 
 @interface FSVenueMapViewController : UIViewController
 
+@property (nonatomic) NSArray *venues;
+
 @end

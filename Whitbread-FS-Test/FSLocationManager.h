@@ -14,4 +14,6 @@
 
 - (float)distanceFromCurrentLocationForLat:(float)lat andLng:(float)lng;
 
+- (void)selectedLocationWithLat:(float)lat andLng:(float)lng;
+
 @end

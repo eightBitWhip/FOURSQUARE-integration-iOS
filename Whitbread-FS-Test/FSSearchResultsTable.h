@@ -25,4 +25,6 @@
 - (void)addPTR;
 - (void)finishedUpdating;
 
+- (NSArray*)currentVenues;
+
 @end

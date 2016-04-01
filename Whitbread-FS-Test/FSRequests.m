@@ -87,6 +87,11 @@
         }
         
     }
+    else {
+        if ( self.responseDelegate ) {
+            [self.responseDelegate requestFailedWithErrorMessage:@"Not enough info!"];
+        }
+    }
     
 }
 

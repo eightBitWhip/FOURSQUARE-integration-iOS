@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FSVenueMapViewController.h"
 
 #import "FSSearchResultsTable.h"
 #import "FSSearchInputView.h"
@@ -102,6 +103,17 @@
     
 }
 
+- (IBAction)showMapView:(id)sender {
+    
+    NSArray *venues = [self.resultsTable currentVenues];
+    if ( venues.count > 0 ) {
+        FSVenueMapViewController *mapController = [self.storyboard instantiateViewControllerWithIdentifier:@"mapView"];
+        mapController.venues = venues;
+        [self presentViewController:mapController animated:YES completion:nil];
+    }
+    
+}
+
 #pragma mark - Requests DMs-
 
 - (void)requestSuccededWithResults:(NSDictionary *)results {
@@ -125,6 +137,9 @@
 - (void)requestFailedWithErrorMessage:(NSString *)msg {
     
     [self hideBusyView];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops" message:msg delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil, nil];
+    [alert show];
     
 }
 
@@ -156,7 +171,7 @@
 
 - (void)selectedVenue:(FSVenue *)venue {
     
-    
+    [[FSLocationManager sharedManager] selectedLocationWithLat:[[venue.location objectForKey:LOCATION_LAT_KEY] floatValue] andLng:[[venue.location objectForKey:LOCATION_LONG_KEY] floatValue]];
     
 }
 

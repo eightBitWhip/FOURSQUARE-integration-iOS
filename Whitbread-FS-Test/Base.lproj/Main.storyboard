@@ -80,6 +80,9 @@
                                             <constraint firstAttribute="width" id="Mng-np-qA6"/>
                                         </constraints>
                                         <state key="normal" title="Map View"/>
+                                        <connections>
+                                            <action selector="showMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4JA-Ma-3su"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
@@ -125,6 +128,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="239"/>
+        </scene>
+        <!--Venue Map View Controller-->
+        <scene sceneID="6cJ-vG-mIH">
+            <objects>
+                <viewController storyboardIdentifier="mapView" id="br6-bj-oAh" customClass="FSVenueMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BFk-53-5Rz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aff-Tu-7n9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ip2-ed-aeD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbk-kg-cal">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMV-xN-Q8A" customClass="FSButton">
+                                <rect key="frame" x="20" y="540" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="okg-ca-znz"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="br6-bj-oAh" eventType="touchUpInside" id="w3t-re-Bxy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TMV-xN-Q8A" firstAttribute="leading" secondItem="Ip2-ed-aeD" secondAttribute="leading" constant="20" id="7Dg-uK-ozb"/>
+                            <constraint firstItem="gbk-kg-cal" firstAttribute="top" secondItem="BFk-53-5Rz" secondAttribute="bottom" id="8wF-uz-1g0"/>
+                            <constraint firstAttribute="trailing" secondItem="gbk-kg-cal" secondAttribute="trailing" id="Dfd-Y2-BIZ"/>
+                            <constraint firstItem="Aff-Tu-7n9" firstAttribute="top" secondItem="TMV-xN-Q8A" secondAttribute="bottom" constant="20" id="TXF-cD-0wM"/>
+                            <constraint firstItem="Aff-Tu-7n9" firstAttribute="top" secondItem="gbk-kg-cal" secondAttribute="bottom" id="bBU-kS-Zz8"/>
+                            <constraint firstAttribute="trailing" secondItem="TMV-xN-Q8A" secondAttribute="trailing" constant="20" id="dKu-uS-uQG"/>
+                            <constraint firstItem="gbk-kg-cal" firstAttribute="leading" secondItem="Ip2-ed-aeD" secondAttribute="leading" id="mDa-Xc-kdM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="gbk-kg-cal" id="7fK-gu-oS8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFy-xz-pzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="239"/>
         </scene>
     </scenes>
 </document>
