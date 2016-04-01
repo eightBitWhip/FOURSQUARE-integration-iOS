@@ -10,4 +10,8 @@
 
 @interface AbstractNetworking : NSObject
 
+@property (nonatomic) NSString *encodeCharacters;
+
+- (void)getDataFromAPI:(NSString*)baseUrl withEndPoint:(NSString*)endPoint andArguments:(NSDictionary*)args;
+
 @end

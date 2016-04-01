@@ -10,4 +10,6 @@
 
 @interface DataFormatter : NSObject
 
++ (BOOL)dictionary:(NSDictionary *)dictionary containsAndIsNotNullKey:(NSString *)key;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface InputValidator : NSObject
 
++ (BOOL)locationSearchTermIsValid:(NSString*)searchTerm;
+
 @end

@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import "FSRequests.h"
+
+@interface ViewController () <SearchRequestProtocol, ResponseProtocol>
+
+@property (nonatomic) FSRequests *requests;
 
 @end
 
@@ -19,9 +23,41 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    
+    self.requests = [[FSRequests alloc] init];
+    self.requests.searchNearDelegate = self;
+    self.requests.responseDelegate = self;
+    
+    [self.requests searchNearWithTerm:@"London"];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Requests DMs-
+
+- (void)requestSuccededWithResults:(NSDictionary *)results {
+    
+    
+    
+}
+
+- (void)requestFailedWithResponse:(NSDictionary *)response {
+    
+    
+    
+}
+
+#pragma mark - Response DMs-
+
+- (void)requestFailedWithErrorMessage:(NSString *)msg {
+    
+    
+    
 }
 
 @end

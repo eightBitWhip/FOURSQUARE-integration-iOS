@@ -10,4 +10,11 @@
 
 @implementation InputValidator
 
++ (BOOL)locationSearchTermIsValid:(NSString *)searchTerm {
+    
+    if (searchTerm.length >= 3 ) return YES;
+    return NO;
+    
+}
+
 @end

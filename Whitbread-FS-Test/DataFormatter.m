@@ -10,4 +10,18 @@
 
 @implementation DataFormatter
 
++ (BOOL)dictionary:(NSDictionary *)dictionary containsAndIsNotNullKey:(NSString *)key {
+    
+    if ( [dictionary objectForKey:key] ) {
+        
+        if ( [dictionary objectForKey:key] != [NSNull null] ) {
+            return YES;
+        }
+        
+    }
+    
+    return NO;
+    
+}
+
 @end
