@@ -21,6 +21,8 @@
 		9719400E1CAEF09900630ABD /* InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719400D1CAEF09900630ABD /* InputValidator.m */; };
 		971940111CAEF0A300630ABD /* DataFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940101CAEF0A300630ABD /* DataFormatter.m */; };
 		971940141CAEF0DB00630ABD /* FSVenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940131CAEF0DB00630ABD /* FSVenueMapViewController.m */; };
+		9719401A1CAEF78500630ABD /* FSSearchResultsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940191CAEF78500630ABD /* FSSearchResultsTable.m */; };
+		9719401D1CAEF97B00630ABD /* FSVenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719401C1CAEF97B00630ABD /* FSVenueCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,10 @@
 		971940101CAEF0A300630ABD /* DataFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFormatter.m; sourceTree = "<group>"; };
 		971940121CAEF0DB00630ABD /* FSVenueMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVenueMapViewController.h; sourceTree = "<group>"; };
 		971940131CAEF0DB00630ABD /* FSVenueMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVenueMapViewController.m; sourceTree = "<group>"; };
+		971940181CAEF78500630ABD /* FSSearchResultsTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearchResultsTable.h; sourceTree = "<group>"; };
+		971940191CAEF78500630ABD /* FSSearchResultsTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchResultsTable.m; sourceTree = "<group>"; };
+		9719401B1CAEF97B00630ABD /* FSVenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVenueCell.h; sourceTree = "<group>"; };
+		9719401C1CAEF97B00630ABD /* FSVenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVenueCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,10 @@
 		97193FFC1CAEEE7D00630ABD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				971940181CAEF78500630ABD /* FSSearchResultsTable.h */,
+				971940191CAEF78500630ABD /* FSSearchResultsTable.m */,
+				9719401B1CAEF97B00630ABD /* FSVenueCell.h */,
+				9719401C1CAEF97B00630ABD /* FSVenueCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -352,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9719401A1CAEF78500630ABD /* FSSearchResultsTable.m in Sources */,
 				971940111CAEF0A300630ABD /* DataFormatter.m in Sources */,
 				971940081CAEF05F00630ABD /* AbstractNetworking.m in Sources */,
 				9719400E1CAEF09900630ABD /* InputValidator.m in Sources */,
@@ -360,6 +371,7 @@
 				97193FD01CAEEE1E00630ABD /* ViewController.m in Sources */,
 				971940141CAEF0DB00630ABD /* FSVenueMapViewController.m in Sources */,
 				97193FCD1CAEEE1E00630ABD /* AppDelegate.m in Sources */,
+				9719401D1CAEF97B00630ABD /* FSVenueCell.m in Sources */,
 				97193FCA1CAEEE1E00630ABD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +600,7 @@
 				97193FF41CAEEE1E00630ABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97193FF51CAEEE1E00630ABD /* Build configuration list for PBXNativeTarget "Whitbread-FS-TestTests" */ = {
 			isa = XCConfigurationList;
@@ -596,6 +609,7 @@
 				97193FF71CAEEE1E00630ABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97193FF81CAEEE1E00630ABD /* Build configuration list for PBXNativeTarget "Whitbread-FS-TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -604,6 +618,7 @@
 				97193FFA1CAEEE1E00630ABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

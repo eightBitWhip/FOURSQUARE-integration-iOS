@@ -10,4 +10,14 @@
 
 @interface FSVenue : NSObject
 
+@property (nonatomic) NSString *name;
+
+@property (nonatomic) NSURL *url;
+
+@property (nonatomic) NSDictionary *location;
+
+- (instancetype)initWithDictionary:(NSDictionary*)dictionary;
+
++ (NSArray*)venuesFromArray:(NSArray*)array;
+
 @end

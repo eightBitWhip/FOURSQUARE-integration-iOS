@@ -8,9 +8,13 @@
 
 #import "ViewController.h"
 
+#import "FSSearchResultsTable.h"
+
 #import "FSRequests.h"
 
 @interface ViewController () <SearchRequestProtocol, ResponseProtocol>
+
+@property (nonatomic) IBOutlet FSSearchResultsTable *resultsTable;
 
 @property (nonatomic) FSRequests *requests;
 
@@ -25,11 +29,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     
-    self.requests = [[FSRequests alloc] init];
-    self.requests.searchNearDelegate = self;
-    self.requests.responseDelegate = self;
-    
-    [self.requests searchNearWithTerm:@"London"];
+    [self attemptSearchWithValue:@"London"];
     
 }
 
@@ -38,11 +38,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)attemptSearchWithValue:(NSString*)searchTerm {
+    
+    if ( !self.requests ) {
+        self.requests = [[FSRequests alloc] init];
+        self.requests.searchNearDelegate = self;
+        self.requests.responseDelegate = self;
+    }
+    
+    [self.requests searchNearWithTerm:searchTerm];
+    
+}
+
 #pragma mark - Requests DMs-
 
 - (void)requestSuccededWithResults:(NSDictionary *)results {
     
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.resultsTable updateWithResults:results];
+    });
     
 }
 
