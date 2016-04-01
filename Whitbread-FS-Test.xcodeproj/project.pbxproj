@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97193FCA1CAEEE1E00630ABD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97193FC91CAEEE1E00630ABD /* main.m */; };
+		97193FCD1CAEEE1E00630ABD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97193FCC1CAEEE1E00630ABD /* AppDelegate.m */; };
+		97193FD01CAEEE1E00630ABD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97193FCF1CAEEE1E00630ABD /* ViewController.m */; };
+		97193FD31CAEEE1E00630ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97193FD11CAEEE1E00630ABD /* Main.storyboard */; };
+		97193FD51CAEEE1E00630ABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97193FD41CAEEE1E00630ABD /* Assets.xcassets */; };
+		97193FD81CAEEE1E00630ABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97193FD61CAEEE1E00630ABD /* LaunchScreen.storyboard */; };
+		97193FE31CAEEE1E00630ABD /* Whitbread_FS_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97193FE21CAEEE1E00630ABD /* Whitbread_FS_TestTests.m */; };
+		97193FEE1CAEEE1E00630ABD /* Whitbread_FS_TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97193FED1CAEEE1E00630ABD /* Whitbread_FS_TestUITests.m */; };
+		971940031CAEEEC900630ABD /* FSVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940021CAEEEC900630ABD /* FSVenue.m */; };
+		971940081CAEF05F00630ABD /* AbstractNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940071CAEF05F00630ABD /* AbstractNetworking.m */; };
+		9719400B1CAEF07B00630ABD /* FSRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719400A1CAEF07B00630ABD /* FSRequests.m */; };
+		9719400E1CAEF09900630ABD /* InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719400D1CAEF09900630ABD /* InputValidator.m */; };
+		971940111CAEF0A300630ABD /* DataFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940101CAEF0A300630ABD /* DataFormatter.m */; };
+		971940141CAEF0DB00630ABD /* FSVenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940131CAEF0DB00630ABD /* FSVenueMapViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97193FDF1CAEEE1E00630ABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97193FBD1CAEEE1E00630ABD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97193FC41CAEEE1E00630ABD;
+			remoteInfo = "Whitbread-FS-Test";
+		};
+		97193FEA1CAEEE1E00630ABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97193FBD1CAEEE1E00630ABD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97193FC41CAEEE1E00630ABD;
+			remoteInfo = "Whitbread-FS-Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		97193FC51CAEEE1E00630ABD /* Whitbread-FS-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whitbread-FS-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97193FC91CAEEE1E00630ABD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97193FCB1CAEEE1E00630ABD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		97193FCC1CAEEE1E00630ABD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		97193FCE1CAEEE1E00630ABD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		97193FCF1CAEEE1E00630ABD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		97193FD21CAEEE1E00630ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97193FD41CAEEE1E00630ABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97193FD71CAEEE1E00630ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97193FD91CAEEE1E00630ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97193FDE1CAEEE1E00630ABD /* Whitbread-FS-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Whitbread-FS-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97193FE21CAEEE1E00630ABD /* Whitbread_FS_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Whitbread_FS_TestTests.m; sourceTree = "<group>"; };
+		97193FE41CAEEE1E00630ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97193FE91CAEEE1E00630ABD /* Whitbread-FS-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Whitbread-FS-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97193FED1CAEEE1E00630ABD /* Whitbread_FS_TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Whitbread_FS_TestUITests.m; sourceTree = "<group>"; };
+		97193FEF1CAEEE1E00630ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		971940011CAEEEC900630ABD /* FSVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVenue.h; sourceTree = "<group>"; };
+		971940021CAEEEC900630ABD /* FSVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVenue.m; sourceTree = "<group>"; };
+		971940041CAEEEF800630ABD /* WFST.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFST.pch; sourceTree = "<group>"; };
+		971940051CAEEF0C00630ABD /* NetworkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkConfig.h; sourceTree = "<group>"; };
+		971940061CAEF05F00630ABD /* AbstractNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractNetworking.h; sourceTree = "<group>"; };
+		971940071CAEF05F00630ABD /* AbstractNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractNetworking.m; sourceTree = "<group>"; };
+		971940091CAEF07B00630ABD /* FSRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRequests.h; sourceTree = "<group>"; };
+		9719400A1CAEF07B00630ABD /* FSRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRequests.m; sourceTree = "<group>"; };
+		9719400C1CAEF09900630ABD /* InputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputValidator.h; sourceTree = "<group>"; };
+		9719400D1CAEF09900630ABD /* InputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputValidator.m; sourceTree = "<group>"; };
+		9719400F1CAEF0A300630ABD /* DataFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFormatter.h; sourceTree = "<group>"; };
+		971940101CAEF0A300630ABD /* DataFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFormatter.m; sourceTree = "<group>"; };
+		971940121CAEF0DB00630ABD /* FSVenueMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVenueMapViewController.h; sourceTree = "<group>"; };
+		971940131CAEF0DB00630ABD /* FSVenueMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVenueMapViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97193FC21CAEEE1E00630ABD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97193FDB1CAEEE1E00630ABD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97193FE61CAEEE1E00630ABD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97193FBC1CAEEE1E00630ABD = {
+			isa = PBXGroup;
+			children = (
+				97193FC71CAEEE1E00630ABD /* Whitbread-FS-Test */,
+				97193FE11CAEEE1E00630ABD /* Whitbread-FS-TestTests */,
+				97193FEC1CAEEE1E00630ABD /* Whitbread-FS-TestUITests */,
+				97193FC61CAEEE1E00630ABD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97193FC61CAEEE1E00630ABD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97193FC51CAEEE1E00630ABD /* Whitbread-FS-Test.app */,
+				97193FDE1CAEEE1E00630ABD /* Whitbread-FS-TestTests.xctest */,
+				97193FE91CAEEE1E00630ABD /* Whitbread-FS-TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97193FC71CAEEE1E00630ABD /* Whitbread-FS-Test */ = {
+			isa = PBXGroup;
+			children = (
+				97193FFF1CAEEE8E00630ABD /* Assets */,
+				97193FFE1CAEEE8800630ABD /* Utilities */,
+				97193FFD1CAEEE8200630ABD /* Models */,
+				97193FFC1CAEEE7D00630ABD /* Views */,
+				97193FFB1CAEEE7500630ABD /* Controllers */,
+				97193FD91CAEEE1E00630ABD /* Info.plist */,
+				97193FC81CAEEE1E00630ABD /* Supporting Files */,
+			);
+			path = "Whitbread-FS-Test";
+			sourceTree = "<group>";
+		};
+		97193FC81CAEEE1E00630ABD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97193FC91CAEEE1E00630ABD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97193FE11CAEEE1E00630ABD /* Whitbread-FS-TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				97193FE21CAEEE1E00630ABD /* Whitbread_FS_TestTests.m */,
+				97193FE41CAEEE1E00630ABD /* Info.plist */,
+			);
+			path = "Whitbread-FS-TestTests";
+			sourceTree = "<group>";
+		};
+		97193FEC1CAEEE1E00630ABD /* Whitbread-FS-TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				97193FED1CAEEE1E00630ABD /* Whitbread_FS_TestUITests.m */,
+				97193FEF1CAEEE1E00630ABD /* Info.plist */,
+			);
+			path = "Whitbread-FS-TestUITests";
+			sourceTree = "<group>";
+		};
+		97193FFB1CAEEE7500630ABD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97193FCB1CAEEE1E00630ABD /* AppDelegate.h */,
+				97193FCC1CAEEE1E00630ABD /* AppDelegate.m */,
+				97193FCE1CAEEE1E00630ABD /* ViewController.h */,
+				97193FCF1CAEEE1E00630ABD /* ViewController.m */,
+				971940121CAEF0DB00630ABD /* FSVenueMapViewController.h */,
+				971940131CAEF0DB00630ABD /* FSVenueMapViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		97193FFC1CAEEE7D00630ABD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		97193FFD1CAEEE8200630ABD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				971940011CAEEEC900630ABD /* FSVenue.h */,
+				971940021CAEEEC900630ABD /* FSVenue.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		97193FFE1CAEEE8800630ABD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				971940061CAEF05F00630ABD /* AbstractNetworking.h */,
+				971940071CAEF05F00630ABD /* AbstractNetworking.m */,
+				971940091CAEF07B00630ABD /* FSRequests.h */,
+				9719400A1CAEF07B00630ABD /* FSRequests.m */,
+				9719400C1CAEF09900630ABD /* InputValidator.h */,
+				9719400D1CAEF09900630ABD /* InputValidator.m */,
+				9719400F1CAEF0A300630ABD /* DataFormatter.h */,
+				971940101CAEF0A300630ABD /* DataFormatter.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		97193FFF1CAEEE8E00630ABD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				97193FD11CAEEE1E00630ABD /* Main.storyboard */,
+				97193FD41CAEEE1E00630ABD /* Assets.xcassets */,
+				97193FD61CAEEE1E00630ABD /* LaunchScreen.storyboard */,
+				971940001CAEEE9400630ABD /* Fonts */,
+				971940041CAEEEF800630ABD /* WFST.pch */,
+				971940051CAEEF0C00630ABD /* NetworkConfig.h */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		971940001CAEEE9400630ABD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97193FC41CAEEE1E00630ABD /* Whitbread-FS-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97193FF21CAEEE1E00630ABD /* Build configuration list for PBXNativeTarget "Whitbread-FS-Test" */;
+			buildPhases = (
+				97193FC11CAEEE1E00630ABD /* Sources */,
+				97193FC21CAEEE1E00630ABD /* Frameworks */,
+				97193FC31CAEEE1E00630ABD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Whitbread-FS-Test";
+			productName = "Whitbread-FS-Test";
+			productReference = 97193FC51CAEEE1E00630ABD /* Whitbread-FS-Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97193FDD1CAEEE1E00630ABD /* Whitbread-FS-TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97193FF51CAEEE1E00630ABD /* Build configuration list for PBXNativeTarget "Whitbread-FS-TestTests" */;
+			buildPhases = (
+				97193FDA1CAEEE1E00630ABD /* Sources */,
+				97193FDB1CAEEE1E00630ABD /* Frameworks */,
+				97193FDC1CAEEE1E00630ABD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97193FE01CAEEE1E00630ABD /* PBXTargetDependency */,
+			);
+			name = "Whitbread-FS-TestTests";
+			productName = "Whitbread-FS-TestTests";
+			productReference = 97193FDE1CAEEE1E00630ABD /* Whitbread-FS-TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		97193FE81CAEEE1E00630ABD /* Whitbread-FS-TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97193FF81CAEEE1E00630ABD /* Build configuration list for PBXNativeTarget "Whitbread-FS-TestUITests" */;
+			buildPhases = (
+				97193FE51CAEEE1E00630ABD /* Sources */,
+				97193FE61CAEEE1E00630ABD /* Frameworks */,
+				97193FE71CAEEE1E00630ABD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97193FEB1CAEEE1E00630ABD /* PBXTargetDependency */,
+			);
+			name = "Whitbread-FS-TestUITests";
+			productName = "Whitbread-FS-TestUITests";
+			productReference = 97193FE91CAEEE1E00630ABD /* Whitbread-FS-TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97193FBD1CAEEE1E00630ABD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Freddie;
+				TargetAttributes = {
+					97193FC41CAEEE1E00630ABD = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					97193FDD1CAEEE1E00630ABD = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 97193FC41CAEEE1E00630ABD;
+					};
+					97193FE81CAEEE1E00630ABD = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 97193FC41CAEEE1E00630ABD;
+					};
+				};
+			};
+			buildConfigurationList = 97193FC01CAEEE1E00630ABD /* Build configuration list for PBXProject "Whitbread-FS-Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97193FBC1CAEEE1E00630ABD;
+			productRefGroup = 97193FC61CAEEE1E00630ABD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97193FC41CAEEE1E00630ABD /* Whitbread-FS-Test */,
+				97193FDD1CAEEE1E00630ABD /* Whitbread-FS-TestTests */,
+				97193FE81CAEEE1E00630ABD /* Whitbread-FS-TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97193FC31CAEEE1E00630ABD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97193FD81CAEEE1E00630ABD /* LaunchScreen.storyboard in Resources */,
+				97193FD51CAEEE1E00630ABD /* Assets.xcassets in Resources */,
+				97193FD31CAEEE1E00630ABD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97193FDC1CAEEE1E00630ABD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97193FE71CAEEE1E00630ABD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97193FC11CAEEE1E00630ABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				971940111CAEF0A300630ABD /* DataFormatter.m in Sources */,
+				971940081CAEF05F00630ABD /* AbstractNetworking.m in Sources */,
+				9719400E1CAEF09900630ABD /* InputValidator.m in Sources */,
+				971940031CAEEEC900630ABD /* FSVenue.m in Sources */,
+				9719400B1CAEF07B00630ABD /* FSRequests.m in Sources */,
+				97193FD01CAEEE1E00630ABD /* ViewController.m in Sources */,
+				971940141CAEF0DB00630ABD /* FSVenueMapViewController.m in Sources */,
+				97193FCD1CAEEE1E00630ABD /* AppDelegate.m in Sources */,
+				97193FCA1CAEEE1E00630ABD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97193FDA1CAEEE1E00630ABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97193FE31CAEEE1E00630ABD /* Whitbread_FS_TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97193FE51CAEEE1E00630ABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97193FEE1CAEEE1E00630ABD /* Whitbread_FS_TestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97193FE01CAEEE1E00630ABD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97193FC41CAEEE1E00630ABD /* Whitbread-FS-Test */;
+			targetProxy = 97193FDF1CAEEE1E00630ABD /* PBXContainerItemProxy */;
+		};
+		97193FEB1CAEEE1E00630ABD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97193FC41CAEEE1E00630ABD /* Whitbread-FS-Test */;
+			targetProxy = 97193FEA1CAEEE1E00630ABD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97193FD11CAEEE1E00630ABD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97193FD21CAEEE1E00630ABD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97193FD61CAEEE1E00630ABD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97193FD71CAEEE1E00630ABD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97193FF01CAEEE1E00630ABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		97193FF11CAEEE1E00630ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97193FF31CAEEE1E00630ABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "Whitbread-FS-Test/WFST.pch";
+				INFOPLIST_FILE = "Whitbread-FS-Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fred.Whitbread-FS-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		97193FF41CAEEE1E00630ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "Whitbread-FS-Test/WFST.pch";
+				INFOPLIST_FILE = "Whitbread-FS-Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fred.Whitbread-FS-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		97193FF61CAEEE1E00630ABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Whitbread-FS-TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fred.Whitbread-FS-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whitbread-FS-Test.app/Whitbread-FS-Test";
+			};
+			name = Debug;
+		};
+		97193FF71CAEEE1E00630ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Whitbread-FS-TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fred.Whitbread-FS-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whitbread-FS-Test.app/Whitbread-FS-Test";
+			};
+			name = Release;
+		};
+		97193FF91CAEEE1E00630ABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Whitbread-FS-TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fred.Whitbread-FS-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Whitbread-FS-Test";
+			};
+			name = Debug;
+		};
+		97193FFA1CAEEE1E00630ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Whitbread-FS-TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fred.Whitbread-FS-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Whitbread-FS-Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97193FC01CAEEE1E00630ABD /* Build configuration list for PBXProject "Whitbread-FS-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97193FF01CAEEE1E00630ABD /* Debug */,
+				97193FF11CAEEE1E00630ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97193FF21CAEEE1E00630ABD /* Build configuration list for PBXNativeTarget "Whitbread-FS-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97193FF31CAEEE1E00630ABD /* Debug */,
+				97193FF41CAEEE1E00630ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		97193FF51CAEEE1E00630ABD /* Build configuration list for PBXNativeTarget "Whitbread-FS-TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97193FF61CAEEE1E00630ABD /* Debug */,
+				97193FF71CAEEE1E00630ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		97193FF81CAEEE1E00630ABD /* Build configuration list for PBXNativeTarget "Whitbread-FS-TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97193FF91CAEEE1E00630ABD /* Debug */,
+				97193FFA1CAEEE1E00630ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97193FBD1CAEEE1E00630ABD /* Project object */;
+}
