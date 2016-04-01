@@ -25,6 +25,10 @@
 		9719401D1CAEF97B00630ABD /* FSVenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719401C1CAEF97B00630ABD /* FSVenueCell.m */; };
 		971940201CAEFE5A00630ABD /* FSSearchInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719401F1CAEFE5A00630ABD /* FSSearchInputView.m */; };
 		971940231CAF018D00630ABD /* FSPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940221CAF018D00630ABD /* FSPullToRefresh.m */; };
+		971940271CAF06C100630ABD /* AnimatedBGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971940261CAF06C100630ABD /* AnimatedBGView.m */; };
+		9719402A1CAF078C00630ABD /* kitty.gif in Resources */ = {isa = PBXBuildFile; fileRef = 971940291CAF078C00630ABD /* kitty.gif */; };
+		9719402C1CAF086100630ABD /* beaut.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9719402B1CAF086100630ABD /* beaut.gif */; };
+		9719402F1CAF0C5000630ABD /* FSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9719402E1CAF0C5000630ABD /* FSButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,12 @@
 		971940211CAF018D00630ABD /* FSPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPullToRefresh.h; sourceTree = "<group>"; };
 		971940221CAF018D00630ABD /* FSPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPullToRefresh.m; sourceTree = "<group>"; };
 		971940241CAF01D200630ABD /* Styles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Styles.h; sourceTree = "<group>"; };
+		971940251CAF06C100630ABD /* AnimatedBGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedBGView.h; sourceTree = "<group>"; };
+		971940261CAF06C100630ABD /* AnimatedBGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedBGView.m; sourceTree = "<group>"; };
+		971940291CAF078C00630ABD /* kitty.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kitty.gif; sourceTree = "<group>"; };
+		9719402B1CAF086100630ABD /* beaut.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = beaut.gif; sourceTree = "<group>"; };
+		9719402D1CAF0C5000630ABD /* FSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSButton.h; sourceTree = "<group>"; };
+		9719402E1CAF0C5000630ABD /* FSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +205,10 @@
 				9719401F1CAEFE5A00630ABD /* FSSearchInputView.m */,
 				971940211CAF018D00630ABD /* FSPullToRefresh.h */,
 				971940221CAF018D00630ABD /* FSPullToRefresh.m */,
+				971940251CAF06C100630ABD /* AnimatedBGView.h */,
+				971940261CAF06C100630ABD /* AnimatedBGView.m */,
+				9719402D1CAF0C5000630ABD /* FSButton.h */,
+				9719402E1CAF0C5000630ABD /* FSButton.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -226,6 +240,7 @@
 		97193FFF1CAEEE8E00630ABD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				971940281CAF077A00630ABD /* Images */,
 				97193FD11CAEEE1E00630ABD /* Main.storyboard */,
 				97193FD41CAEEE1E00630ABD /* Assets.xcassets */,
 				97193FD61CAEEE1E00630ABD /* LaunchScreen.storyboard */,
@@ -242,6 +257,15 @@
 			children = (
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		971940281CAF077A00630ABD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				971940291CAF078C00630ABD /* kitty.gif */,
+				9719402B1CAF086100630ABD /* beaut.gif */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +372,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97193FD81CAEEE1E00630ABD /* LaunchScreen.storyboard in Resources */,
+				9719402C1CAF086100630ABD /* beaut.gif in Resources */,
 				97193FD51CAEEE1E00630ABD /* Assets.xcassets in Resources */,
+				9719402A1CAF078C00630ABD /* kitty.gif in Resources */,
 				97193FD31CAEEE1E00630ABD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +406,9 @@
 				971940081CAEF05F00630ABD /* AbstractNetworking.m in Sources */,
 				9719400E1CAEF09900630ABD /* InputValidator.m in Sources */,
 				971940231CAF018D00630ABD /* FSPullToRefresh.m in Sources */,
+				971940271CAF06C100630ABD /* AnimatedBGView.m in Sources */,
 				971940031CAEEEC900630ABD /* FSVenue.m in Sources */,
+				9719402F1CAF0C5000630ABD /* FSButton.m in Sources */,
 				9719400B1CAEF07B00630ABD /* FSRequests.m in Sources */,
 				97193FD01CAEEE1E00630ABD /* ViewController.m in Sources */,
 				971940141CAEF0DB00630ABD /* FSVenueMapViewController.m in Sources */,

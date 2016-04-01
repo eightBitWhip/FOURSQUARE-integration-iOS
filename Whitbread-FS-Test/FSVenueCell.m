@@ -8,11 +8,14 @@
 
 #import "FSVenueCell.h"
 
+#import "Styles.h"
+
 @implementation FSVenueCell
 
 - (void)styleCell {
     
-    self.contentView.backgroundColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.55];
+    self.contentView.backgroundColor = [STYLE_COLOUR colorWithAlphaComponent:0.6];
+    self.backgroundColor = [UIColor clearColor];
     
 }
 

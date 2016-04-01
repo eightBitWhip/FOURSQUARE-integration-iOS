@@ -21,11 +21,26 @@
     [super awakeFromNib];
     [self setupView];
     
+    [self.searchInput becomeFirstResponder];
+    
 }
 
 - (void)setupView {
     
     self.searchInput.delegate = self;
+    self.searchContainerTopContraint.constant = ([UIScreen mainScreen].bounds.size.height / 2.0) - (self.frame.size.height / 2.0);
+    
+}
+
+- (void)moveToTop {
+    
+    self.searchContainerTopContraint.constant = 0.0;
+    [self setNeedsUpdateConstraints];
+    
+    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [self layoutIfNeeded];
+    } completion:nil];
+    
     
 }
 
@@ -34,6 +49,8 @@
     if ( self.searchDelegate && [InputValidator locationSearchTermIsValid:searchTerm] ) {
         
         if ( [InputValidator locationSearchTermIsValid:searchTerm] ) {
+            
+            [self moveToTop];
         
             [self.searchInput resignFirstResponder];
             [self.searchDelegate performSearchWithTerm:searchTerm];

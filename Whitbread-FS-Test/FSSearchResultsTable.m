@@ -10,8 +10,6 @@
 
 #import "DataFormatter.h"
 
-#import "FSVenue.h"
-
 #import "FSVenueCell.h"
 #import "FSPullToRefresh.h"
 
@@ -34,6 +32,10 @@
     self.delegate = self;
     self.dataSource = self;
     
+    self.alpha = 0.0;
+    
+    self.backgroundColor = [UIColor clearColor];
+    
 }
 
 -(void)addPTR{
@@ -45,6 +47,8 @@
 }
 
 - (void)updateWithResults:(NSDictionary *)results {
+    
+    self.alpha = 1.0;
     
     if ( [DataFormatter dictionary:results containsAndIsNotNullKey:RESPONSE_VENUES_KEY] ) {
         

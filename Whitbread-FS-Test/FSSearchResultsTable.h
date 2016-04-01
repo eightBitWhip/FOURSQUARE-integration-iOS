@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "FSVenue.h"
+
 @protocol SearchResultsTableProtocol <NSObject>
 
 - (void)tableRequestedUpdate;
+- (void)selectedVenue:(FSVenue*)venue;
 
 @end
 

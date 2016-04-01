@@ -10,8 +10,11 @@
 
 #import "FSSearchResultsTable.h"
 #import "FSSearchInputView.h"
+#import "AnimatedBGView.h"
 
 #import "FSRequests.h"
+
+#define BG_IMAGE (@"beaut")
 
 @interface ViewController () <SearchRequestProtocol, ResponseProtocol, SearchContainerProtocol, SearchResultsTableProtocol>
 
@@ -19,7 +22,11 @@
 
 @property (weak, nonatomic) IBOutlet FSSearchInputView *searchInputContainer;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *mapButtonWidthConstraint;
+
 @property (nonatomic) FSRequests *requests;
+
+@property (nonatomic) BOOL bgInitComplete;
 
 @end
 
@@ -32,12 +39,20 @@
     self.searchInputContainer.searchDelegate = self;
     self.resultsTable.tableDelegate = self;
     
+    self.bgInitComplete = NO;
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     
     [self.resultsTable addPTR];
     [self.resultsTable setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    
+    if ( self.bgInitComplete == NO ) {
+        AnimatedBGView *animatedBg = [[AnimatedBGView alloc] initWithGifFileName:BG_IMAGE];
+        [self.view insertSubview:animatedBg atIndex:0];
+        self.bgInitComplete = YES;
+    }
     
 }
 
@@ -63,6 +78,7 @@
 - (void)requestSuccededWithResults:(NSDictionary *)results {
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        self.mapButtonWidthConstraint.constant = 100.0;
         [self.resultsTable updateWithResults:results];
     });
     
@@ -105,6 +121,12 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.searchInputContainer nudge]; //!!
     });
+    
+}
+
+- (void)selectedVenue:(FSVenue *)venue {
+    
+    
     
 }
 
